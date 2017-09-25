@@ -1,19 +1,21 @@
-// `for` is Go's only looping construct. Here are
-// three basic types of `for` loops.
-
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/joshcork/LearningGo/samplePackages/commandLineFlags"
+	"github.com/joshcork/LearningGo/samplePackages/datetimeManipulations"
+	"github.com/joshcork/LearningGo/samplePackages/stringutil"
+)
 
 func main() {
+	fmt.Printf("Hello, world.\n")
+	fmt.Printf(stringutil.Reverse("!oG ,olleH"))
 
-	// You can also `continue` to the next iteration of
-	// the loop.
-	for n := 0; n <= 5; n++ {
-		fmt.Println(n % 2)
-		if n%2 == 0 {
-			continue
-		}
-		fmt.Println(n)
-	}
+	commandLineFlags.CommandLineFlagsExamples()
+	datetimeManipulation.DatetimeManipulationExamples()
+	datetimeManipulation.ZoneTime()
+	datetimeManipulation.TimeDiff()
+	datetimeManipulation.DateAddition()
+
 }
